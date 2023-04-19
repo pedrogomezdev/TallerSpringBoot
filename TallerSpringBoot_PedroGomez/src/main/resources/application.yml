@@ -1,0 +1,23 @@
+management.endpoints.web.exposure.include: "*"
+            
+server.port: 8090
+
+course:
+   message: "Hello World!"
+   default-message: "Mensaje por defecto"
+
+spring.profiles.active: prod
+
+spring:
+   h2:
+      console.enabled: true
+   datasource:
+      url: jdbc:h2:file:./data/mydb
+      username: root
+      password: admin
+      driverClassName: org.h2.Driver
+   jpa:
+      spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+      hibernate:
+         ddl-auto: validate
+         default_schema: mydb
