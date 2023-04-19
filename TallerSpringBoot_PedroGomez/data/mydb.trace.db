@@ -1,0 +1,4 @@
+2023-04-19 15:15:46 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "[*]selecto * from usuarios"; se esperaba "SAVEPOINT, SCRIPT, SHUTDOWN, SHOW"
+Syntax error in SQL statement "[*]selecto * from usuarios"; expected "SAVEPOINT, SCRIPT, SHUTDOWN, SHOW"; SQL statement:
+selecto * from usuarios [42001-214]

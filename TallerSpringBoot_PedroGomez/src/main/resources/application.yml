@@ -6,7 +6,7 @@ course:
    message: "Hello World!"
    default-message: "Mensaje por defecto"
 
-spring.profiles.active: prod
+#spring.profiles.active: prod
 
 spring:
    h2:
