@@ -1,6 +1,9 @@
 management.endpoints.web.exposure.include: "*"
             
-server.port: 8090
+server:
+   port: 8090
+   # Descomentar para la ruta de Swagger.
+   #servlet.context-path: /my-custom-path
 
 course:
    message: "Hello World!"
@@ -9,17 +12,28 @@ course:
 #spring.profiles.active: prod
 
 spring:
+
+
    h2:
       console.enabled: true
+      
+      
    datasource:
-      url: jdbc:h2:mem:mydb
-      #url: jdbc:h2:file:/data/mydb
-      #url: jdbc:h2:file:./data/mydb
+      #url: jdbc:h2:mem:mydb
+      url: jdbc:h2:file:./data/mydb
       username: root
       password: admin
       driverClassName: org.h2.Driver
+      
+      
+      
    jpa:
       database-platform: org.hibernate.dialect.H2Dialect
       hibernate:
-         ddl-auto: create
+         ddl-auto: validate
          default_schema: mydb
+         
+
+
+
+
