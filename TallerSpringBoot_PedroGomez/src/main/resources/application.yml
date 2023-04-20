@@ -12,8 +12,8 @@ spring:
    h2:
       console.enabled: true
    datasource:
-      #url: jdbc:h2:mem:mydb
-      url: jdbc:h2:file:/data/mydb
+      url: jdbc:h2:mem:mydb
+      #url: jdbc:h2:file:/data/mydb
       #url: jdbc:h2:file:./data/mydb
       username: root
       password: admin

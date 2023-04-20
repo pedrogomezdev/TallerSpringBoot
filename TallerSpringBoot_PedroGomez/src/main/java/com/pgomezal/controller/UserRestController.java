@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.pgomezal.entities.User;
 import com.pgomezal.service.UserServiceImpl;
 
+
 @RestController
 @RequestMapping(value="/api/v1/")
 public class UserRestController {
@@ -22,13 +23,30 @@ public class UserRestController {
 	@Autowired
 	UserServiceImpl userServiceImpl;
 	
+	
 	// No devuelve nada
 	@GetMapping(value = "users")
 	public ResponseEntity<List<User>> getAllUsers(){
 		List<User> lista = new ArrayList<User>();
 		lista = userServiceImpl.getAllUsers();
+		
 		return new ResponseEntity<>(lista, HttpStatus.OK);
 	}
+	
+	// No devuelve nada
+		@GetMapping(value = "users2")
+		public ResponseEntity<List<User>> getAllUsers2(){
+			List<User> lista = new ArrayList<User>();
+			lista = userServiceImpl.getAllUsers();
+			
+			return ResponseEntity.ok().body(lista);
+		}
+		
+		@GetMapping(value = "test")
+		public ResponseEntity<String> cadena(){
+			
+			return ResponseEntity.ok().body("TEST");
+		}
 	
 	// No devuelve nada.
 	@GetMapping(value="users/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
