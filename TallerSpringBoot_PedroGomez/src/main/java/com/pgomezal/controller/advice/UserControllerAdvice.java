@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+import com.pgomezal.exceptions.ErrorResponse;
 import com.pgomezal.exceptions.UserValidationException;
 
 @ControllerAdvice
@@ -19,7 +20,7 @@ public class UserControllerAdvice extends ResponseEntityExceptionHandler{
 		return handleExceptionInternal(ex, bodyOfResponse, new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
 	}
 	
-	/*
+	
 	@ExceptionHandler(value = {Exception.class})
     protected ResponseEntity<Object> handleAllExceptions(Exception ex, WebRequest request){
         ErrorResponse errorResponse = new ErrorResponse(
@@ -30,6 +31,8 @@ public class UserControllerAdvice extends ResponseEntityExceptionHandler{
         );
         return handleExceptionInternal(ex, errorResponse, new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
     }
-	*/
+	
+	
+	
 	
 }
