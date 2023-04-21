@@ -1,0 +1,3 @@
+testMessage:
+   message: "Hello World! I'm a Developer!!"
+   default-message: "I'm a developer but this is a default message."

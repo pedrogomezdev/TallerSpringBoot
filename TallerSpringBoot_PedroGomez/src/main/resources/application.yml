@@ -2,25 +2,33 @@ management.endpoints.web.exposure.include: "*"
             
 server:
    port: 8090
-   # Descomentar para la ruta de Swagger.
-   #servlet.context-path: /my-custom-path
+   # Si activamos la siguiente línea, podremos acceder al swagger. Tengo que comentarla cuando no lo necesite 
+   # porque si no, no consigo acceder a la consola del h2.
+   # servlet.context-path: /my-custom-path
 
-course:
+# Mensajes de prueba
+testMessage:
    message: "Hello World!"
    default-message: "Mensaje por defecto"
 
+# Indicamos el profile activo:
 #spring.profiles.active: prod
+spring.profiles.active: dev
 
 spring:
-
 
    h2:
       console.enabled: true
       
       
    datasource:
+      # Url para BBDD en memoria
       #url: jdbc:h2:mem:mydb
+      
+      # Url para BBDD permanente:
       url: jdbc:h2:file:./data/mydb
+      
+      # Credenciales BBDD
       username: root
       password: admin
       driverClassName: org.h2.Driver
