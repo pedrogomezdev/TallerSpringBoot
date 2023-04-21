@@ -1,4 +1,4 @@
-# ACTIVIDADES DE SPRING BOOT CON MS - BOOTCAMP
+# ACTIVIDADES DE SPRING BOOT CON MS - BOOTCAMP NTT DATA
 ### Proyecto realizado por Pedro Gómez Alonso para el taller de Spring Boot con MS del bootcamp realizado en NTT Data.
 
 Dejo el proyecto totalmente funcional. Además, dejo también un word con todos los pasos que he realizado para resolver la actividad (con capturas de pantalla incluídas). 
